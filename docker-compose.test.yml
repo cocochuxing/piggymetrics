@@ -2,12 +2,12 @@ version: '2.1'
 services:
   rabbitmq:
     ports:
-      - 5676:5676
+      - 5672:5672
 
   config:
     build: config
     ports:
-      - 8889:8889
+      - 8888:8888
 
   registry:
     build: registry
@@ -48,7 +48,7 @@ services:
   notification-service:
     build: notification-service
     ports:
-      - 8001:8001
+      - 8000:8000
 
   notification-mongodb:
     build: mongodb
